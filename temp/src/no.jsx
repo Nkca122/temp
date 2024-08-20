@@ -22,7 +22,7 @@ export default function No(){
     }
 
     return(
-        <button style = {style} onMouseEnter={changePos}>
+        <button style = {style} onMouseEnter={changePos} onTouchStart={changePos}>
             No
         </button>
     )
