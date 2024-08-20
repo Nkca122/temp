@@ -1,29 +1,39 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 
-export default function No(){
+export default function No() {
     let [pos, setPos] = useState({
-        x: 75,
-        y: 60
+        x: null,
+        y: null
     });
 
-    let style = {
-        position: "absolute",
-        top: pos.y + "%",
-        left: pos.x + "%"
-    }
+    let [style, setStyle] = useState(
+        {
+            position: "relative"
+        }
+    
+    )
 
-    function changePos(){
+    function changePos() {
         setPos(
             {
                 x: Math.random() * 80,
                 y: Math.random() * 80
             }
         )
+
+        setStyle({
+            position: "absolute",
+            top: pos.y + "%",
+            left: pos.x + "%"
+        })
     }
 
-    return(
-        <button style = {style} onMouseEnter={changePos} onTouchStart={changePos}>
-            No
-        </button>
+    return (
+        <Link to="/">
+            <button style={style} onMouseEnter={changePos} onClick={changePos}>
+                No
+            </button>
+        </Link>
     )
 }

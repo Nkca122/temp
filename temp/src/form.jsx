@@ -3,14 +3,14 @@ export default function Form() {
     const style = {
         container: {
             height: "80vh",
-            width: "60vw",
+            width: window.innerWidth > 800 ? "60vw" : "100vw",
             position: "absolute",
-            left: "20vw",
+            left: window.innerWidth > 800 ? "20vw" : "0",
             top: "10vh"
         },
         inner: {
             height: "80vh",
-            width: "60vw",
+            width: "100%",
             position: "relative",
             border: "1px solid black",
             display:"flex",

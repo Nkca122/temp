@@ -8,9 +8,11 @@ export default function Index() {
         },
         container:{
             width: "60%",
+            heigth:"fit-content",
             display:"flex",
+            flexDirection :"row",
             justifyContent:"space-around",
-            marginTop:"20px"
+            alignItems:"center",
         }
     }
     return (
